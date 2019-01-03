@@ -1,2 +1,6 @@
 package com.example.ahmetfatih.jonnycontainer.Model
-class Kategori(titel: String, img:String)
+class Kategori(val title: String, val img:String){
+    override fun toString(): String {
+        return title
+    }
+}
