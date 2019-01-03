@@ -21,7 +21,7 @@
             android:text="HATS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/kategoriResmi" app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/kategoriİsmi" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:textSize="24sp"
             android:textColor="@android:color/background_light" android:textStyle="bold"/>
