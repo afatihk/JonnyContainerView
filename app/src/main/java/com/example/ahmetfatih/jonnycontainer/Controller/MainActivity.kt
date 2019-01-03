@@ -1,7 +1,8 @@
-package com.example.ahmetfatih.jonnycontainer
+package com.example.ahmetfatih.jonnycontainer.Controller
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.ahmetfatih.jonnycontainer.R
 
 class MainActivity : AppCompatActivity() {
 
