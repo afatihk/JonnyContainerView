@@ -3,6 +3,7 @@ package com.example.ahmetfatih.jonnycontainer.Controller
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.example.ahmetfatih.jonnycontainer.Adaptor.CategoryAdapter
 import com.example.ahmetfatih.jonnycontainer.Model.Kategori
 import com.example.ahmetfatih.jonnycontainer.R
