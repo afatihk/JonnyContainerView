@@ -20,6 +20,8 @@ class CategoryAdapter (val context: Context, val kategori: List<Kategori> ): Bas
 
         val kategory = kategori[position]
 
+
+
         val resourceId = context.resources.getIdentifier(kategory.img, "drawable",context.packageName)
         kategoriResim.setImageResource(resourceId)
         println(resourceId)

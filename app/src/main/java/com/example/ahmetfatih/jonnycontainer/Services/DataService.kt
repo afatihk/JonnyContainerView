@@ -9,7 +9,7 @@ object DataService {
         Kategori("SHİRT", "shirtimage"),
         Kategori("HOODİES", "hoodieimage"),
         Kategori("HATS", "hatimage"),
-        Kategori("DİGİTAL", "digitalimage")
+        Kategori("DİGİTAL", "digitalgoodsimage")
     )
 
     val hats = listOf(
