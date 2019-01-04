@@ -13,19 +13,23 @@ import com.example.ahmetfatih.jonnycontainer.R
 class CategoryAdapter (val context: Context, val kategori: List<Kategori> ): BaseAdapter() {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val categoryView: View
-        categoryView = LayoutInflater.from(context).inflate(R.layout.kategori_liste_elemani, null)
-        val kategoriResim : ImageView = categoryView.findViewById(R.id.kategoriResmi)
-        val kategoriIsim : TextView = categoryView.findViewById(R.id.kategoriİsmi)
-        println("Yüksek Yüksek Yüksek PERFORMANS")
+        val holder: ViewHolder
+
+        if (convertView == null){
+            categoryView = LayoutInflater.from(context).inflate(R.layout.kategori_liste_elemani, null)
+            holder = ViewHolder()
+            holder.categoryImage = categoryView.findViewById(R.id.kategoriResmi)
+            holder.categoryName = categoryView.findViewById(R.id.kategoriİsmi)
+            categoryView.tag = holder
+        }else{
+            holder = convertView.tag as ViewHolder
+            categoryView = convertView        }
 
         val kategory = kategori[position]
 
-
-
         val resourceId = context.resources.getIdentifier(kategory.img, "drawable",context.packageName)
-        kategoriResim.setImageResource(resourceId)
-        println(resourceId)
-        kategoriIsim.text = kategory.title
+        holder.categoryImage?.setImageResource(resourceId)
+        holder.categoryName?.text = kategory.title
         return categoryView
     }
 
@@ -39,5 +43,11 @@ class CategoryAdapter (val context: Context, val kategori: List<Kategori> ): Bas
 
     override fun getCount(): Int {
         return kategori.count()
+    }
+
+
+    private class ViewHolder{
+        var categoryImage: ImageView? = null
+        var categoryName: TextView? = null
     }
 }

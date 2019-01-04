@@ -9,6 +9,14 @@ object DataService {
         Kategori("SHİRT", "shirtimage"),
         Kategori("HOODİES", "hoodieimage"),
         Kategori("HATS", "hatimage"),
+        Kategori("DİGİTAL", "digitalgoodsimage"),
+        Kategori("SHİRT", "shirtimage"),
+        Kategori("HOODİES", "hoodieimage"),
+        Kategori("HATS", "hatimage"),
+        Kategori("DİGİTAL", "digitalgoodsimage"),
+        Kategori("SHİRT", "shirtimage"),
+        Kategori("HOODİES", "hoodieimage"),
+        Kategori("HATS", "hatimage"),
         Kategori("DİGİTAL", "digitalgoodsimage")
     )
 
