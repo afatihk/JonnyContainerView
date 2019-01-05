@@ -24,10 +24,26 @@ object DataService {
         Urun("DevslopesGrapicBoonie","hat1","18$"),
         Urun("DevslopesHatBlack","hat2","20$"),
         Urun("DevslopesGrapicBoonie","hat3","18$"),
+        Urun("DevslopesGrapicBoonie","hat4","22$"),
+        Urun("DevslopesGrapicBoonie","hat1","18$"),
+        Urun("DevslopesHatBlack","hat2","20$"),
+        Urun("DevslopesGrapicBoonie","hat3","18$"),
+        Urun("DevslopesGrapicBoonie","hat4","22$"),
+        Urun("DevslopesGrapicBoonie","hat1","18$"),
+        Urun("DevslopesHatBlack","hat2","20$"),
+        Urun("DevslopesGrapicBoonie","hat3","18$"),
         Urun("DevslopesGrapicBoonie","hat4","22$")
     )
 
     val hoodies = listOf(
+        Urun("Hoody Gray","hoodie1","28$"),
+        Urun("Hoody Red","hoodie2","32$"),
+        Urun("Gray Hoody","hoodie3","28$"),
+        Urun("Red Hoody","hoodie4","32$"),
+        Urun("Hoody Gray","hoodie1","28$"),
+        Urun("Hoody Red","hoodie2","32$"),
+        Urun("Gray Hoody","hoodie3","28$"),
+        Urun("Red Hoody","hoodie4","32$"),
         Urun("Hoody Gray","hoodie1","28$"),
         Urun("Hoody Red","hoodie2","32$"),
         Urun("Gray Hoody","hoodie3","28$"),
@@ -39,6 +55,16 @@ object DataService {
         Urun("Shirt 2","shirt2","20$"),
         Urun("Shirt 3","shirt3","25$"),
         Urun("Shirt 4","shirt4","35$"),
+        Urun("Shirt 4","shirt5","35$"),
+        Urun("Shirt 1 ","shirt1","18$"),
+        Urun("Shirt 2","shirt2","20$"),
+        Urun("Shirt 3","shirt3","25$"),
+        Urun("Shirt 4","shirt4","35$"),
+        Urun("Shirt 4","shirt5","35$"),
+        Urun("Shirt 1 ","shirt1","18$"),
+        Urun("Shirt 2","shirt2","20$"),
+        Urun("Shirt 3","shirt3","25$"),
+        Urun("Shirt 4","shirt4","35$"),
         Urun("Shirt 4","shirt5","35$")
     )
 
@@ -46,8 +72,8 @@ object DataService {
 
     fun urunGetir(sinifi: String) : List<Urun>{
         return when(sinifi){
-            "SHIRTS" -> shirts
-            "HOODIES" -> hoodies
+            "SHİRT" -> shirts
+            "HOODİES" -> hoodies
             "HATS" -> hats
             else -> digitalGoods
         }
