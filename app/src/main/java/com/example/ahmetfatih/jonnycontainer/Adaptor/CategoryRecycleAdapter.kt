@@ -10,12 +10,13 @@ import android.widget.TextView
 import com.example.ahmetfatih.jonnycontainer.Model.Kategori
 import com.example.ahmetfatih.jonnycontainer.R
 
-class CategoryRecycleAdapter(val icerik : Context, val siniflandirma : List<Kategori>)
+class CategoryRecycleAdapter(val icerik : Context, val siniflandirma : List<Kategori>,
+                             val secme : (Kategori)->Unit)
     : RecyclerView.Adapter<CategoryRecycleAdapter.IcAlem>() {
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): IcAlem {
         val gorunum = LayoutInflater.from(icerik)
             .inflate(R.layout.kategori_liste_elemani, p0,false)
-        return IcAlem(gorunum)
+        return IcAlem(gorunum, secme)
     }
 
     override fun getItemCount(): Int {
@@ -26,7 +27,7 @@ class CategoryRecycleAdapter(val icerik : Context, val siniflandirma : List<Kate
         p0.baglama(icerik, siniflandirma[p1])
     }
 
-    inner class IcAlem(itemView: View) : RecyclerView.ViewHolder(itemView){
+    inner class IcAlem(itemView: View, val secme: (Kategori) -> Unit) : RecyclerView.ViewHolder(itemView){
         val resim = itemView.findViewById<ImageView>(R.id.kategoriResmi)
         val isim = itemView.findViewById<TextView>(R.id.kategoriİsmi)
 
@@ -34,6 +35,8 @@ class CategoryRecycleAdapter(val icerik : Context, val siniflandirma : List<Kate
             val kaynakId = context.resources.getIdentifier(sinif.img, "drawable", context.packageName)
             resim.setImageResource(kaynakId)
             isim.text = sinif.title
+
+            itemView.setOnClickListener { secme(sinif) }
         }
     }
 }
