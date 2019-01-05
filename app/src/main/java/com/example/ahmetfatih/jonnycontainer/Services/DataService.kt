@@ -41,4 +41,15 @@ object DataService {
         Urun("Shirt 4","shirt4","35$"),
         Urun("Shirt 4","shirt5","35$")
     )
+
+    val digitalGoods = listOf<Urun>()
+
+    fun urunGetir(sinifi: String) : List<Urun>{
+        return when(sinifi){
+            "SHIRTS" -> shirts
+            "HOODIES" -> hoodies
+            "HATS" -> hats
+            else -> digitalGoods
+        }
+    }
 }
